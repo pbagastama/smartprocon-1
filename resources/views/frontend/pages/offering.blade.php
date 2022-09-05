@@ -17,7 +17,7 @@
                     <li class="progress-bar__dot full poppins">
                         1
                         <div class="title-step poppins">
-                            Choose Location/Area
+                            Choose Products
                         </div>
                     </li>
                     <li class="progress-bar__connector poppins"></li>
@@ -38,7 +38,7 @@
                     <li class="progress-bar__dot poppins">
                         4
                         <div class="title-step poppins">
-                            Choose Solutions
+                            Choose System
                         </div>
                     </li>
                     <li class="progress-bar__connector poppins"></li>
@@ -52,7 +52,7 @@
 
                 <div class="step step1">
                     <div class="title-step text-center">
-                        <p class="text poppins">Select your area to install smart system</p>
+                        <p class="text poppins">What are you looking for?</p>
                     </div>
 
                     <div class="top row m-0">
@@ -132,7 +132,7 @@
                                 <div class="box-radio">
                                     <input class="form-check-input" type="radio" name="floor-and-rooms"
                                         id="inlineRadio2" value="6-More">
-                                    <label class="form-check-label poppins" for="inlineRadio2">More than 6</label>
+                                    <label class="form-check-label poppins" for="inlineRadio2">6 - More</label>
                                 </div>
                                 <div class="box-img">
                                     <img src="{{ asset('images/smarthome/radio_ic_baseline.png') }}"
@@ -153,7 +153,7 @@
                                 <div class="box-radio">
                                     <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                         id="inlineRadio1" value="500$-800$">
-                                    <label class="form-check-label poppins" for="inlineRadio1">$500 - $800</label>
+                                    <label class="form-check-label poppins" for="inlineRadio1">500$ - 800$</label>
                                 </div>
                                 <div class="box-img">
                                     <img src="{{ asset('images/smarthome/radio_ic_baseline.png') }}"
@@ -166,7 +166,7 @@
                                 <div class="box-radio">
                                     <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                         id="inlineRadio2" value="500$-800$">
-                                    <label class="form-check-label poppins" for="inlineRadio2">$500 - $800</label>
+                                    <label class="form-check-label poppins" for="inlineRadio2">500$ - 800$</label>
                                 </div>
 
                                 <div class="box-img">
@@ -180,7 +180,7 @@
                                 <div class="box-radio">
                                     <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                         id="inlineRadio1" value="500$-800$">
-                                    <label class="form-check-label poppins" for="inlineRadio1">$500 - $800</label>
+                                    <label class="form-check-label poppins" for="inlineRadio1">500$ - 800$</label>
                                 </div>
 
                                 <div class="box-img">
@@ -194,7 +194,7 @@
                                 <div class="box-radio">
                                     <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                         id="inlineRadio2" value="$800-More">
-                                    <label class="form-check-label poppins" for="inlineRadio2">More than $800</label>
+                                    <label class="form-check-label poppins" for="inlineRadio2">800$ - More</label>
                                 </div>
                                 <div class="box-img">
                                     <img src="{{ asset('images/smarthome/radio_entypo_dots.png') }}"
@@ -308,7 +308,7 @@
                             <label for="inputCountry" class="col-2 col-md-2 col-form-label poppins">Country</label>
                             <div class="col-12 col-md-10">
                                 <input type="text" class="form-control poppins @error('country') is-invalid @enderror"
-                                    name="country" id="country" value="{{ old('title') }}" placeholder="Please enter your country">
+                                    name="country" value="{{ old('title') }}" placeholder="Please enter your country">
 
                                 @error('country')
                                 <div class="alert alert-danger mt-2">
@@ -334,7 +334,6 @@
     </section>
 </div>
 <script>
-    document.getElementsByName("kota")[0].addEventListener('input', doThing);
     const previousButton = document.getElementById("previous");
     const nextButton = document.getElementById("next");
     const submitButton = document.getElementById('validate');
@@ -353,10 +352,6 @@
     previousButton.onclick = goPrevious
     nextButton.onclick = goNext
 
-
-    function doThing(){
-        document.getElementById("country").value = "Indonesia";
-    }
     function goNext(e) {
         e.preventDefault()
         currentStep += 1
